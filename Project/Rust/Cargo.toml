@@ -1,0 +1,21 @@
+[package]
+name = "rust"
+version = "0.1.0"
+edition = "2021"
+[profile.release]
+strip=true
+opt-level = "z"
+codegen-units = 1
+lto = true
+panic = "abort"
+[profile.dev]
+strip=true
+opt-level = "z"
+codegen-units = 1
+lto = true
+panic = "abort"
+[lib]
+crate-type = ["cdylib"]
+[dependencies]
+godot = { git = "https://github.com/godot-rust/gdext", branch = "master",features = ["experimental-wasm", "lazy-function-tables"] }
+nanoserde="0.1.37"
