@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvrdw68luag18"]
+
+[ext_resource type="Script" path="res://stuff.gd" id="1_ohxrb"]
+[ext_resource type="Script" path="res://BoundingBox2.gd" id="2_tnr4l"]
+
+[node name="Base" type="Node"]
+
+[node name="BoundingBox" type="BoundingBox" parent="."]
+size = Vector2i(40, 10)
+position = Vector2(28, 27)
+script = ExtResource("1_ohxrb")
+
+[node name="BoundingBox2" type="BoundingBox" parent="."]
+size = Vector2i(100, 10)
+position = Vector2(56, 54)
+script = ExtResource("2_tnr4l")
